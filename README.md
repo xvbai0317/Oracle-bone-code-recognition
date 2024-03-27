@@ -1,10 +1,25 @@
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
-# Oracle-bone-code-recognition
+CNN识别甲骨文
+
+介绍
+
+本项目使用卷积神经网络（CNN）对甲骨文进行识别。甲骨文是中国最早的文字，具有重要的历史和文化价值。通过深度学习技术，我们可以自动识别和解读这些古老的文字，为研究者和爱好者提供方便。
+
+数据集
+
+我们使用了公开可用的Oracle241数据集，该数据集包含了大量的甲骨文图像及其对应的标签。数据集中的每个样本都是一个包含甲骨文图像和其对应标签的JSON文件。
+
+模型
+
+我们使用了预训练的ResNet50模型作为基础模型，并在其顶部添加了一个全连接层用于分类。我们还使用了迁移学习技术，将预训练模型在ImageNet数据集上的权重作为初始权重，以加快模型的训练速度并提高识别准确率。
+
+训练
+
+我们使用PyTorch框架进行模型的训练。首先，我们将数据集划分为训练集和验证集，然后使用DataLoader加载数据并进行批处理。接着，我们定义损失函数和优化器，并设置训练参数（如学习率、批次大小等）。最后，我们使用循环迭代训练模型，每次迭代都计算损失并更新模型参数。
+
+评估
+
+我们在验证集上评估模型的性能。我们计算了准确率、召回率和F1分数等指标，以衡量模型在识别甲骨文方面的性能。此外，我们还可视化了一些预测结果，以便直观地了解模型的表现。
+
+结论
+
+我们的实验结果表明，使用CNN可以有效地识别甲骨文。通过进一步调整模型结构和训练参数，我们可以进一步提高识别准确率。未来，我们希望能够将这种方法应用于更多的古代文字识别任务中，为文化遗产的保护和研究做出贡献。
